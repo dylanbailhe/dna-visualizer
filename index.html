@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DNA Visualizer | 1BNA</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+</head>
+<body>
+  <div id="scene"></div>
+  <div class="panel">
+    <h1>DNA Visualizer</h1>
+    <p>Experimental B-DNA · PDB 1BNA · 12 base pairs</p>
+    <label class="color-label" for="color-mode">Atom coloring</label>
+    <select id="color-mode" aria-label="Atom coloring">
+      <option value="element">By element (C, N, O, P)</option>
+      <option value="nucleotide">By nucleotide (A, T, G, C)</option>
+    </select>
+    <button id="clear-highlight" type="button" hidden>Clear selection</button>
+    <p id="selection-info" class="selection-info">Click any atom to highlight its nucleotide.</p>
+    <button id="spin-toggle" type="button" aria-pressed="false">Pause Spin</button>
+    <p id="status" role="status">Loading 1BNA…</p>
+  </div>
+  <div id="atom-tooltip" role="tooltip"></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
